@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:new_app/design/color.dart';
 import 'package:new_app/design/images.dart';
+import 'package:new_app/design/style.dart';
 
 class VehicleItem extends StatelessWidget {
   const VehicleItem({super.key});
@@ -42,34 +43,16 @@ class VehicleItem extends StatelessWidget {
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               'BMW GS-7638',
-              style: TextStyle(
-                color: secondaryColor,
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-              ),
+              style: body2TextStyle,
             ),
-            //
+
             RichText(
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               text: const TextSpan(
-                style: TextStyle(fontSize: 14),
                 children: <TextSpan>[
-                  TextSpan(
-                    text: 'Driver: ',
-                    style: TextStyle(
-                      color: secondaryVariantColor,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  TextSpan(
-                    text: 'Paul',
-
-                    style: TextStyle(
-                      color: secondaryColor,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
+                  TextSpan(text: 'Driver: ', style: hint1TextStyle),
+                  TextSpan(text: 'Paul', style: body2TextStyle),
                 ],
               ),
             ),
@@ -86,14 +69,7 @@ class VehicleItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           statePickupImage,
-          const Text(
-            'pickup',
-            style: TextStyle(
-              color: secondaryVariantColor,
-              fontSize: 12,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
+          const Text('pickup', style: hint2TextStyle),
         ],
       ),
     );

@@ -39,3 +39,13 @@ final SvgPicture stateUnboardingImage = SvgPicture.asset(
 final SvgPicture stateUnloadImage = SvgPicture.asset(
   'assets/images/state_unload.svg',
 );
+final SvgPicture arrowBackImage = SvgPicture.asset(
+  'assets/images/arrow_back_image.svg',
+);
+final SvgPicture accountCircleImages = SvgPicture.asset(
+  'assets/images/account_circle_images.svg',
+);
+
+final SvgPicture checkImage = SvgPicture.asset(
+  'assets/images/check_images.svg',
+);

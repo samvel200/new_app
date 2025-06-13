@@ -5,7 +5,8 @@ import 'package:new_app/design/style.dart';
 
 class VehicleItem extends StatelessWidget {
   final Function() onTap;
-  const VehicleItem({super.key, required this.onTap});
+  final Function() onStateTap;
+  const VehicleItem({super.key, required this.onTap, required this.onStateTap});
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +66,7 @@ class VehicleItem extends StatelessWidget {
 
   Widget _state() {
     return InkWell(
-      onTap: () {},
+      onTap: onStateTap,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

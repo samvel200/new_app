@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:new_app/design/images.dart';
+
 import 'package:new_app/design/utils/size_utils.dart';
 import 'package:new_app/design/widgets/accent_button.dart';
 import 'package:new_app/design/widgets/selectable_item.dart';
 
-class DriverList extends StatefulWidget {
-  const DriverList({super.key});
+class VehicleStateList extends StatefulWidget {
+  const VehicleStateList({super.key});
 
   @override
-  State<DriverList> createState() => _DriverListState();
+  State<VehicleStateList> createState() => _VehicleStateListState();
 }
 
-class _DriverListState extends State<DriverList> {
-  int? _selectDriverIndex;
+class _VehicleStateListState extends State<VehicleStateList> {
+  int? _selectStateIndex;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -36,13 +37,13 @@ class _DriverListState extends State<DriverList> {
         return const SizedBox(height: 8);
       },
       itemBuilder: (BuildContext context, int index) {
-        final bool isSelected = _selectDriverIndex == index;
+        final bool isSelected = _selectStateIndex == index;
         return SelectableItem(
-          image: accountCircleImages,
-          title: 'Paul',
+          image: statePickupImage,
+          title: 'Pickup',
           isSelected: isSelected,
           onTap: () {
-            _selectDriverIndex = index;
+            _selectStateIndex = index;
             setState(() {});
           },
         );
